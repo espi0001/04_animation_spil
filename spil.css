@@ -1,0 +1,613 @@
+/***************************** SCREEN ***********************************/
+
+#screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  container-type: inline-size;
+  font-size: 2cqw;
+}
+
+#start {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(svg/start_screen.svg);
+  z-index: 1000;
+}
+
+#start_txt {
+  position: absolute;
+  top: 6%;
+  left: 19%;
+  font-size: 10cqw;
+  text-align: center;
+  font-family: "DynaPuff", sans-serif;
+  color: #cd212a;
+}
+
+#start_txt_2 {
+  position: absolute;
+  border: 20px solid #28231d;
+  background-color: #28231d;
+  border-radius: 12px;
+  top: 24%;
+  left: 37%;
+  width: 55%;
+  text-align: center;
+  font-family: "DynaPuff", sans-serif;
+}
+
+#start_txt_2 p {
+  color: beige;
+  font-size: 2.4cqw;
+}
+
+#start_karakter {
+  position: absolute;
+  width: 33%;
+  top: 31%;
+  left: 6%;
+  aspect-ratio: 857.44/1023.86;
+  background-image: url(svg/main_karakter_glad.svg);
+  background-size: cover;
+  pointer-events: none;
+}
+
+#play_knap {
+  position: absolute;
+  width: 29%;
+  top: 63%;
+  left: 51%;
+  aspect-ratio: 610.89/199.51;
+  background-image: url(svg/play_knap.svg);
+  background-size: cover;
+
+  animation-name: puls_kf;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+#game_over {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #cd212a;
+  z-index: 1000;
+}
+
+#game_over_txt {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  color: #f4f9ff;
+  font-size: 10cqw;
+  top: 10%;
+  left: 20%;
+}
+#game_over_txt_1 {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  color: #f4f9ff;
+  font-size: 4cqw;
+  top: 30%;
+  left: 32%;
+}
+
+#game_over_points {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  font-size: 3cqw;
+  top: 44%;
+  left: 37%;
+}
+
+#game_over_karakter {
+  position: absolute;
+  width: 31%;
+  top: 35%;
+  left: 4%;
+  aspect-ratio: 857.44/1023.86;
+  background-image: url(svg/main_karakter_sur.svg);
+  background-size: cover;
+  pointer-events: none;
+
+  animation-name: bounce_kf;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce_kf {
+  40% {
+    translate: 0 -10px;
+  }
+
+  60% {
+    translate: 0 10px;
+  }
+}
+
+#genstart1 {
+  position: absolute;
+  width: 29%;
+  top: 58%;
+  left: 55%;
+  aspect-ratio: 630/219;
+  background-image: url(svg/try_again_knap.svg);
+  background-size: cover;
+
+  animation-name: puls_kf;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+#level_complete {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #008c45;
+  z-index: 1000;
+}
+
+#level_complete_txt {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  color: #f4f9ff;
+  font-size: 10cqw;
+  top: 10%;
+  left: 20%;
+}
+
+#level_complete_txt_1 {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  color: #f4f9ff;
+  font-size: 4cqw;
+  top: 30%;
+  left: 32%;
+}
+
+#level_complete_points {
+  position: absolute;
+  font-family: "DynaPuff", sans-serif;
+  font-size: 3cqw;
+  top: 44%;
+  left: 37%;
+}
+
+#level_complete_karakter {
+  position: absolute;
+  width: 33%;
+  top: 30.5%;
+  left: 3%;
+  aspect-ratio: 857.44/1023.86;
+  background-image: url(svg/main_karakter_glad.svg);
+  background-size: cover;
+  pointer-events: none;
+}
+
+#genstart2 {
+  position: absolute;
+  width: 29%;
+  top: 58%;
+  left: 55%;
+  aspect-ratio: 630/219;
+
+  background-image: url(svg/play_again_knap.svg);
+  background-size: cover;
+
+  animation-name: puls_kf;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+@keyframes puls_kf {
+  0% {
+    transform: rotate(-1deg);
+    scale: 1;
+  }
+
+  100% {
+    transform: rotate(1deg);
+    scale: 1.05;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/***************************** SCREEN ***********************************/
+
+#game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+}
+
+#game_background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(svg/spil5.svg);
+  background-size: cover;
+}
+
+.billede {
+  aspect-ratio: 879.63/847.93;
+  width: 14%;
+  position: absolute;
+  left: 72%;
+  top: 22%;
+  transition: 1s ease;
+}
+
+.billede img:hover {
+  -webkit-transform: rotateZ(-10deg);
+  -ms-transform: rotateZ(-10deg);
+  transform: rotateZ(-10deg);
+  transition: 1s ease;
+}
+.lamper {
+  aspect-ratio: 724.16/501.44;
+  width: 20%;
+  position: absolute;
+  left: 49%;
+  top: 9%;
+}
+
+.lamper:hover {
+  filter: drop-shadow(0px 0px 20px yellow);
+}
+
+/***************************** ELEMENTS ***********************************/
+#good_container1,
+#good_container2,
+#good_container3 {
+  position: absolute;
+  width: 12%;
+  top: -37%;
+  aspect-ratio: 857.44/1023.86;
+}
+#good_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/g_tomatsovs.svg);
+  background-size: cover;
+}
+
+#good_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/g_olivenolie.svg);
+  background-size: cover;
+}
+
+#good_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/g_basilikum.svg);
+  background-size: cover;
+}
+
+#bad_container1,
+#bad_container2,
+#bad_container3 {
+  position: absolute;
+  width: 12%;
+  top: -37%;
+  aspect-ratio: 857.44/1023.86;
+}
+
+#bad_sprite1 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/b_kylling.svg);
+  background-size: cover;
+}
+
+#bad_sprite2 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/b_ketchup.svg);
+  background-size: cover;
+}
+
+#bad_sprite3 {
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/b_ananas.svg);
+  background-size: cover;
+}
+
+/*****************************ANIMATIONS***********************************/
+.fald {
+  animation-name: fald_kf;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.speed1 {
+  animation-duration: 3s;
+}
+
+.speed2 {
+  animation-duration: 2.5s;
+}
+
+.speed3 {
+  animation-duration: 2s;
+}
+.speed4 {
+  animation-duration: 1.5s;
+}
+
+@keyframes fald_kf {
+  100% {
+    translate: 0% 660%;
+  }
+}
+
+.forsvindGood {
+  animation-name: forsvindGood_kf;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+@keyframes forsvindGood_kf {
+  15% {
+    scale: 2;
+  }
+
+  100% {
+    rotate: 720deg;
+    scale: 0;
+  }
+}
+
+.forsvindBad {
+  /**zoom ud og drej**/
+  animation-name: forsvindBad_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes forsvindBad_kf {
+  15% {
+    scale: 2;
+    opacity: 1;
+    rotate: 0deg;
+  }
+  100% {
+    scale: 0;
+    opacity: 0;
+    rotate: 360deg;
+  }
+}
+
+.frys {
+  animation-play-state: paused;
+}
+
+.pulse {
+  animation-name: pulse_kf;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes pulse_kf {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.005;
+  }
+}
+
+/*****************************TIME BOARD***********************************/
+
+#game_ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#time_board {
+  position: absolute;
+  width: 8%;
+  aspect-ratio: 857.44/1023.86;
+  top: 2%;
+  right: 2%;
+}
+
+#urskive {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(svg/ui_timer.svg);
+  background-size: cover;
+}
+
+#minut_viser,
+#time_viser {
+  position: absolute;
+  top: 13%;
+  left: 48%;
+  width: 4%;
+  height: 37%;
+  border-radius: 50%;
+  transform-origin: bottom center;
+  background-color: #28231d;
+}
+
+#time_viser {
+  top: 20%;
+  height: 30%;
+  background-color: #cd212a;
+}
+
+.minut_animation {
+  animation-name: min_kf;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes min_kf {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.time_animation {
+  animation-name: time_kf;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+}
+
+@keyframes time_kf {
+  to {
+    transform: rotate(30deg);
+    background-color: #cd212a;
+  }
+}
+
+/*****************************SCORE BOARD***********************************/
+#score_board {
+  width: 6%;
+  aspect-ratio: 857.44/1023.86;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+}
+
+#point {
+  position: absolute;
+  top: 33%;
+  left: 109%;
+  width: 85%;
+  font-family: "DynaPuff", sans-serif;
+}
+
+/*****************************LIFE BOARD***********************************/
+
+#life_board {
+  width: 6%;
+  aspect-ratio: 857.44/1023.86;
+  position: absolute;
+  top: 15%;
+  left: 1%;
+}
+
+#liv {
+  position: absolute;
+  top: 33%;
+  left: 109%;
+  width: 85%;
+  font-family: "DynaPuff", sans-serif;
+}
+
+.ryste {
+  position: relative;
+  animation-name: ryste_kf;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes ryste_kf {
+  0% {
+    rotate: 0deg;
+  }
+
+  25% {
+    rotate: 45deg;
+    color: #cd212a;
+  }
+
+  75% {
+    rotate: -45deg;
+    color: #cd212a;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+/*****************************POSITIONER***********************************/
+.pos1 {
+  left: 40%;
+}
+.pos2 {
+  left: 45%;
+}
+.pos3 {
+  left: 50%;
+}
+.pos4 {
+  left: 55%;
+}
+.pos5 {
+  left: 60%;
+}
+.pos6 {
+  left: 65%;
+}
+.pos7 {
+  left: 70%;
+}
+.pos8 {
+  left: 75%;
+}
+
+/*****************************DELAY***********************************/
+.delay1 {
+  animation-delay: 0s;
+}
+.delay2 {
+  animation-delay: 0.4s;
+}
+.delay3 {
+  animation-delay: 0.8s;
+}
+.delay4 {
+  animation-delay: 1s;
+}
+.delay5 {
+  animation-delay: 1.2s;
+}
+.delay6 {
+  animation-delay: 1.5s;
+}

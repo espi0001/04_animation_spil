@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610.89 199.51">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cd212a;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #f4f9ff;
+      }
+
+      .cls-3 {
+        fill: #008c45;
+      }
+    </style>
+  </defs>
+  <g id="Layer_3" data-name="Layer 3">
+    <g id="flag">
+      <g>
+        <path id="grøn" class="cls-3" d="m203.87,0v199.51H17.47c-9.61,0-17.47-7.86-17.47-17.47V17.47C0,7.86,7.86,0,17.47,0h186.4Z"/>
+        <rect id="hvid" class="cls-2" x="203.87" width="203.87" height="199.51"/>
+        <path id="rød" class="cls-1" d="m610.89,17.47v164.56c0,9.61-7.86,17.47-17.47,17.47h-185.67V0h185.67c9.61,0,17.47,7.86,17.47,17.47Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

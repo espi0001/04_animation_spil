@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <link rel="icon" href="logo/logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="logo/logo.webp" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600&family=Raleway:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="spil.css">
+
+    <link rel="stylesheet" href="menu.css">
+
+    <title>Pizza Madness</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="svg/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="spil.html">Spil</a></li>
+                <li><a href="assets.html">Assets</a></li>
+                <li><a href="grafik.html">Grafik</a></li>
+                <li><a href="teknik.html">Teknik</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="screen">
+            <div id="game">
+                <div id="game_background">
+                    <div class="billede">
+                        <img src="svg/mellemground_billede.svg" alt="mellemground_billede">
+                    </div>
+                    <div class="lamper">
+                        <img src="svg/mellemground_lys.svg" alt="mellemground_lys">
+                    </div>
+                </div>
+                <div id="game_elements">
+
+                    <!-- gode elementer -->
+                    <div id="good_container1">
+                        <div id="good_sprite1"></div>
+                    </div>
+                    <div id="good_container2">
+                        <div id="good_sprite2"></div>
+                    </div>
+                    <div id="good_container3">
+                        <div id="good_sprite3"></div>
+                    </div>
+
+                    <!-- dårlige elementer -->
+                    <div id="bad_container1">
+                        <div id="bad_sprite1"></div>
+                    </div>
+                    <div id="bad_container2">
+                        <div id="bad_sprite2"></div>
+                    </div>
+
+                    <div id="bad_container3">
+                        <div id="bad_sprite3"></div>
+                    </div>
+                </div>
+                <div id="game_foreground"></div>
+                <div id="game_ui">
+                    <div id="score_board">
+                        <img src="svg/ui_point.svg" alt="point">
+                        <div id="point"></div>
+                    </div>
+                    <div id="life_board">
+                        <img src="svg/ui_liv.svg" alt="liv">
+                        <div id="liv"> = <span id="liv_tal"></span></div>
+                    </div>
+                    <div id="time_board">
+                        <div id="urskive"></div>
+                        <div id="time_viser" class=""></div>
+                        <div id="minut_viser" class=""></div>
+                    </div>
+                </div>
+                <div id="start" class="">
+                    <div id="start_txt">Pizza Madness</div>
+                    <div id="start_txt_2">
+                        <p>Help the Italian grandfather create a perfect pizza with good ingredients.</p>
+                        <p>Catch the bad ingredients. We do not want them on the pizza.</p>
+                        <p>Be cautious! Three mistakes will ruin the pizza.</p>
+                    </div>
+                    <div id="start_karakter"></div>
+                    <div id="play_knap"></div>
+                </div>
+
+                <div id="game_over" class="">
+                    <div id="game_over_txt">Mamma mia!</div>
+                    <div id="game_over_txt_1">You ruined the pizza!</div>
+                    <div id="game_over_points"></div>
+                    <div id="game_over_karakter"></div>
+                    <div id="genstart1"></div>
+                </div>
+                <div id="level_complete" class="">
+                    <div id="level_complete_txt">Grazie mille!</div>
+                    <div id="level_complete_txt_1">You made a delicious pizza</div>
+                    <div id="level_complete_points"></div>
+                    <div id="level_complete_karakter"></div>
+                    <div id="genstart2"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p> Pizza Madness af Ester Piazza-Koldbye</p>
+    </footer>
+
+    <div id="sounds">
+        <!-- TODO: Tilføj audio elementer her -->
+        <audio src="lyd/baggrundsmusik_AdobeStock.m4a" id="sound_baggrundsmusik"></audio>
+        <!-- Lyde når man trykker på de gode elementer -->
+        <audio src="lyd/nooo.mp3" id="sound_nooo"></audio>
+        <audio src="lyd/nonono_non_quello.mp3" id="sound_nonono_non_quello"></audio>
+        <audio src="lyd/no_che_fai.mp3" id="sound_no_che_fai"></audio>
+
+
+
+        <!-- Lyde når man trykker på de dårlige elementer og når de falder ned på pizzaen -->
+        <audio src="lyd/ottimo.mp3" id="sound_ottimo"></audio>
+        <audio src="lyd/bravo.mp3" id="sound_bravo"></audio>
+        <audio src="lyd/siiiii.mp3" id="sound_siiiii"></audio>
+
+
+        <!-- game over -->
+        <audio src="lyd/mamma_mia.mp3" id="sound_mamma_mia"></audio>
+        <audio src="lyd/na_ma_che_faiiii.mp3" id="sound_na_ma_che_faiiii"></audio>
+        <audio src="lyd/you_ruined_my_sunday.mp3" id="sound_you_ruined_my_sunday"></audio>
+        <audio src="lyd/mannaggia.mp3" id="sound_mannaggia"></audio>
+
+
+        <!-- level complete -->
+        <audio src="lyd/grazie_mille.mp3" id="sound_grazie_mille"></audio>
+        <audio src="lyd/you_did_it.mp3" id="sound_you_did_it"></audio>
+        <audio src="lyd/mmmm_mi_piace.mp3" id="sound_mmmm_mi_piace"></audio>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>
